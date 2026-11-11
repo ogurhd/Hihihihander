@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://nunsfwlpf5uu"]
+
+[ext_resource type="Script" uid="uid://pkkjuv07oi58" path="res://label.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://1xalt1vnbuhv" path="res://button.gd" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1478236411]
+
+[node name="Panel" type="Panel" parent="." unique_id=791572845]
+offset_right = 350.0
+offset_bottom = 500.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel" unique_id=2076530408]
+layout_mode = 0
+offset_right = 355.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 71
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_0e48y")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Panel" unique_id=2025830554]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.02
+anchor_top = 0.008
+anchor_right = -0.02
+anchor_bottom = 0.008
+offset_left = 134.0
+offset_top = 256.0
+offset_right = 221.0
+offset_bottom = 340.0
+script = ExtResource("2_epypp")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Panel/Button" to="Panel/Label" method="_on_button_button_down"]
